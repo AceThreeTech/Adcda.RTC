@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\ADCDA-ePCR\\Projects\\Adcda.RTC\\Adcda.Server.RTC\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\ADCDA-ePCR\\Projects\\Adcda.RTC\\Adcda.Server.RTC\\wwwroot\\images\\civil_defence_logo_black.jpg",
+      "PackagePath": "staticwebassets\\images\\civil_defence_logo_black.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Adcda.Server.RTC.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.Adcda.Server.RTC.props",
+      "PackagePath": "build\\Adcda.Server.RTC.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Adcda.Server.RTC.props",
+      "PackagePath": "buildMultiTargeting\\Adcda.Server.RTC.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.Adcda.Server.RTC.props",
+      "PackagePath": "buildTransitive\\Adcda.Server.RTC.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,161 @@
+﻿@page "/dashboard"
+
+
+<MudGrid>
+
+    <MudItem xs="12" sm="6" md="3">
+        <MudPaper Elevation="25" Class="d-flex flex-row pt-6 pb-4" Style="height:100px;">
+            <MudIcon Icon="@Icons.Material.Filled.ViewCarousel" Color="Color.Primary" Class="mx-4" Style="width:54px; height:54px;"></MudIcon>
+            <div>
+                <MudText Typo="Typo.subtitle1" Class="mud-text-secondary mb-n1">Total Vehicles</MudText>
+                <MudText Typo="Typo.h5">334</MudText>
+            </div>
+        </MudPaper>
+    </MudItem>
+    <MudItem xs="12" sm="6" md="3">
+        <MudPaper Elevation="25" Class="d-flex flex-row pt-6 pb-4" Style="height:100px;">
+            <MudIcon Icon="@Icons.Material.Filled.Assignment" Color="Color.Error" Class="mx-4" Style="width:54px; height:54px;"></MudIcon>
+            <div>
+                <MudText Typo="Typo.subtitle1" Class="mud-text-secondary mb-n1">Respond</MudText>
+                <MudText Typo="Typo.h5">25</MudText>
+            </div>
+        </MudPaper>
+    </MudItem>
+    <MudItem xs="12" sm="6" md="3">
+        <MudPaper Elevation="25" Class="d-flex flex-row pt-6 pb-4" Style="height:100px;">
+            <MudIcon Icon="@Icons.Material.Filled.Face" Color="Color.Success" Class="mx-4" Style="width:54px; height:54px;"></MudIcon>
+            <div>
+                <MudText Typo="Typo.subtitle1" Class="mud-text-secondary mb-n1">At Scene</MudText>
+                <MudText Typo="Typo.h5">21</MudText>
+            </div>
+        </MudPaper>
+    </MudItem>
+    <MudItem xs="12" sm="6" md="3">
+        <MudPaper Elevation="25" Class="d-flex flex-row pt-6 pb-4" Style="height:100px;">
+            <MudIcon Icon="@Icons.Material.Filled.Groups" Color="Color.Warning" Class="mx-4" Style="width:54px; height:54px;"></MudIcon>
+            <div>
+                <MudText Typo="Typo.subtitle1" Class="mud-text-secondary mb-n1">At Destination</MudText>
+                <MudText Typo="Typo.h5">50</MudText>
+            </div>
+        </MudPaper>
+    </MudItem>
+
+    <MudItem xs="12" sm="6" md="3">
+        <MudPaper Elevation="25" Class="pa-4" Style="height:400px;">
+            <MudChart ChartType="ChartType.Donut" Width="300px" Height="300px" @bind-SelectedIndex="Index" InputData="@data"></MudChart>
+        </MudPaper>
+    </MudItem>
+    <MudItem xs="12" sm="8" md="6">
+        <MudPaper Elevation="25" Class="d-flex flex-row pt-6 pb-4 pl-4" Style="height:400px;justify-content:space-evenly;">
+
+
+        </MudPaper>
+    </MudItem>
+    <MudItem xs="12" sm="6" md="3">
+        <MudDataGrid Items="@ElementsNew.Take(4)" Dense="true">
+            <Columns>
+                <Column T="ElementNew" Field="Number" Title="Nr" Hidden />
+                <Column T="ElementNew" CellStyleFunc="@_cellStyleFunc2" Sortable="false" Filterable="false" />
+                <Column T="ElementNew" Field="Priority" Title="Priority" Sortable="true" Filterable="false" />
+                <Column T="ElementNew" Field="Vehicles" Title="Vehicles" Sortable="true" Filterable="false" />
+            </Columns>
+        </MudDataGrid>
+    </MudItem>
+
+    <MudItem xs="12" sm="6" md="3">
+        <MudDataGrid Items="@Elements.Take(4)" Dense="true">
+            <Columns>
+                <Column T="Element" Field="Number" Title="Nr" Hidden />
+                <Column T="Element" CellStyleFunc="@_cellStyleFunc1" Sortable="false" Filterable="false" />
+                <Column T="Element" Field="Total" Title="Total" Sortable="true" Filterable="false" />
+                <Column T="Element" Field="Percentage" Title="Percentage" Sortable="true" Filterable="false" />
+            </Columns>
+        </MudDataGrid>
+    </MudItem>
+    <MudItem xs="12" sm="8" md="6">
+        <MudPaper Elevation="25" Class="pa-4">
+            <MudChart ChartType="ChartType.Bar" ChartSeries="@Series" XAxisLabels="@XAxisLabels" YAxisLabels="YAxisLabels" Width="100%"></MudChart>
+        </MudPaper>
+    </MudItem>
+    <MudItem xs="12" sm="6" md="3">
+        <MudDataGrid Items="@Elements.Take(4)" Dense="true">
+            <Columns>
+                <Column T="Element" Field="Number" Title="Nr" Hidden />
+                <Column T="Element" CellStyleFunc="@_cellStyleFunc1" Sortable="false" Filterable="false" />
+                <Column T="Element" Field="Total" Title="Total" Sortable="true" Filterable="false" />
+                <Column T="Element" Field="Percentage" Title="Percentage" Sortable="true" Filterable="false" />
+            </Columns>
+        </MudDataGrid>
+    </MudItem>
+
+</MudGrid>
+
+
+@code {
+    private IEnumerable<Element> Elements = new List<Element>();
+    private IEnumerable<ElementNew> ElementsNew = new List<ElementNew>();
+
+    private int Index = -1; 
+    int dataSize = 4;
+    public double[] data = { 50, 25, 20, 5 };
+
+    private Func<Element, string> _cellStyleFunc1 => x =>
+    {
+        string style = "";
+
+        if (x.Number == 1)
+            style += "background-color:#8CED8C";
+
+        else if (x.Number == 2)
+            style += "background-color:#E5BDE5";
+
+        else if (x.Number == 3)
+            style += "background-color:#EACE5D";
+
+        else if (x.Number == 4)
+            style += "background-color:#F1F165";
+
+        return style;
+    };
+
+    private Func<ElementNew, string> _cellStyleFunc2 => x =>
+    {
+        string style = "";
+
+        if (x.Number == 1)
+            style += "background-color:#8CED8C";
+
+        else if (x.Number == 2)
+            style += "background-color:#E5BDE5";
+
+        else if (x.Number == 3)
+            style += "background-color:#EACE5D";
+
+        else if (x.Number == 4)
+            style += "background-color:#F1F165";
+
+        return style;
+    };
+
+    public List<ChartSeries> Series = new List<ChartSeries>()
+    {
+        new ChartSeries() { Name = "Response Time > 7", Data = new double[] { 40 } },
+        new ChartSeries() { Name = "Response Time < 20", Data = new double[] { 19 } },
+    };
+    public string[] XAxisLabels = { "1207", "1208" };
+    public string[] YAxisLabels = { "Response Time > 7", "Response Time < 20" };
+
+    public class Element
+    {
+        public int Number { get; set; }
+        public string Total { get; set; }
+        public string Percentage { get; set; }
+    }
+
+    public class ElementNew
+    {
+        public int Number { get; set; }
+        public string Priority { get; set; }
+        public string Vehicles { get; set; }
+    }
+}
