@@ -6,3 +6,16 @@
 }
 
 <component type="typeof(App)" render-mode="ServerPrerendered" />
+
+<script src="https://maps.googleapis.com/maps/api/js?key={{key}}&v=3"></script>
+<script>
+    function initialize() {
+        var latlng = new google.maps.LatLng(24.466214086977338, 54.387764031445734);
+        var options = {
+            zoom: 12, center: latlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById
+            ("map"), options);
+    }
+</script>
