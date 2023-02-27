@@ -1,52 +1,120 @@
 ﻿@page "/dashboard"
 
 
-<MudGrid>
+<MudGrid Style="width:calc(100% + 56px);">
+
+    <MudItem xs="12" sm="6" md="3" >
+        <MudPaper Elevation="25" Class="d-flex flex-row" Style="height:70px;padding-top:7px;display:flex;justify-content:space-between;">
+            <MudIcon Icon="@Icons.Material.Filled.ViewCarousel" Color="Color.Primary" Class="mx-4" Style="width:50px; height:50px;"></MudIcon>
+            <div style="display:flex;flex-direction:column;justify-content:flex-start;align-items:center;padding-right:10px;">
+                <MudText Typo="Typo.subtitle1" Class="mud-text-secondary mb-n1" Style="font-weight:500;">Total Vehicles</MudText>
+                <MudText Typo="Typo.h5" Style="font-weight:bold;">334</MudText>
+            </div>
+        </MudPaper>
+    </MudItem>
+    <MudItem xs="12" sm="6" md="3">
+        <MudPaper Elevation="25" Class="d-flex flex-row" Style="height:70px;padding-top:7px;display:flex;justify-content:space-between;">
+            <MudIcon Icon="@Icons.Material.Filled.Assignment" Color="Color.Error" Class="mx-4" Style="width:50px; height:50px;"></MudIcon>
+            <div style="display:flex;flex-direction:column;justify-content:flex-start;align-items:center;padding-right:10px;">
+                <MudText Typo="Typo.subtitle1" Class="mud-text-secondary mb-n1" Style="font-weight:500;">Respond</MudText>
+                <MudText Typo="Typo.h5" Style="font-weight:bold;">25</MudText>
+            </div>
+        </MudPaper>
+    </MudItem>
+    <MudItem xs="12" sm="6" md="3">
+        <MudPaper Elevation="25" Class="d-flex flex-row" Style="height:70px;padding-top:7px;display:flex;justify-content:space-between;">
+            <MudIcon Icon="@Icons.Material.Filled.Face" Color="Color.Success" Class="mx-4" Style="width:50px; height:50px;"></MudIcon>
+            <div style="display:flex;flex-direction:column;justify-content:flex-start;align-items:center;padding-right:10px;">
+                <MudText Typo="Typo.subtitle1" Class="mud-text-secondary mb-n1" Style="font-weight:500;">At Scene</MudText>
+                <MudText Typo="Typo.h5" Style="font-weight:bold;">21</MudText>
+            </div>
+        </MudPaper>
+    </MudItem>
+    <MudItem xs="12" sm="6" md="3">
+        <MudPaper Elevation="25" Class="d-flex flex-row" Style="height:70px;padding-top:7px;display:flex;justify-content:space-between;">
+            <MudIcon Icon="@Icons.Material.Filled.Groups" Color="Color.Warning" Class="mx-4" Style="width:50px; height:50px;"></MudIcon>
+            <div style="display:flex;flex-direction:column;justify-content:flex-start;align-items:center;padding-right:10px;">
+                <MudText Typo="Typo.subtitle1" Class="mud-text-secondary mb-n1" Style="font-weight:500;">At Destination</MudText>
+                <MudText Typo="Typo.h5" Style="font-weight:bold;">50</MudText>
+            </div>
+        </MudPaper>
+    </MudItem>
 
     <MudItem xs="12" sm="6" md="3">
-        <MudPaper Elevation="25" Class="d-flex flex-row pt-6 pb-4" Style="height:100px;">
-            <MudIcon Icon="@Icons.Material.Filled.vehicle" Color="Color.Primary" Class="mx-4" Style="width:54px; height:54px;"></MudIcon>
-            <div>
-                <MudText Typo="Typo.subtitle1" Class="mud-text-secondary mb-n1">Total Vehicles</MudText>
-                <MudText Typo="Typo.h5">334</MudText>
+
+        <MudPaper Elevation="25" Class="pa-2" Style="height: calc(100vh - 195px)">
+            <div class="row" style="display:flex;">
+                <MudItem xs="12" sm="6" md="6">
+                    <MudChart ChartType="ChartType.Donut" Width="190px" Height="190px" @bind-SelectedIndex="Index" InputData="@data" ChartOptions="@options">
+                        <CustomGraphics>
+                            <text class="donut-inner-text" x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica" font-size="3" font-weight="normal">Abu Dhabi</text>
+                            <text class="donut-inner-text" x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica" font-size="5" font-weight="bold">@data.Sum().ToString()</text>
+                        </CustomGraphics>
+                    </MudChart>
+                </MudItem>
+                <MudItem xs="12" sm="6" md="6">
+                    <MudChart ChartType="ChartType.Donut" Width="190px" Height="190px" @bind-SelectedIndex="Index" InputData="@data" ChartOptions="@options">
+                        <CustomGraphics>
+                            <text class="donut-inner-text" x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica" font-size="3" font-weight="normal">Al Ain</text>
+                            <text class="donut-inner-text" x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica" font-size="5" font-weight="bold">@data.Sum().ToString()</text>
+                        </CustomGraphics>
+                    </MudChart>
+                </MudItem>
             </div>
-        </MudPaper>
-    </MudItem>
-    <MudItem xs="12" sm="6" md="3">
-        <MudPaper Elevation="25" Class="d-flex flex-row pt-6 pb-4" Style="height:100px;">
-            <MudIcon Icon="@Icons.Material.Filled.Assignment" Color="Color.Error" Class="mx-4" Style="width:54px; height:54px;"></MudIcon>
-            <div>
-                <MudText Typo="Typo.subtitle1" Class="mud-text-secondary mb-n1">Respond</MudText>
-                <MudText Typo="Typo.h5">25</MudText>
-            </div>
-        </MudPaper>
-    </MudItem>
-    <MudItem xs="12" sm="6" md="3">
-        <MudPaper Elevation="25" Class="d-flex flex-row pt-6 pb-4" Style="height:100px;">
-            <MudIcon Icon="@Icons.Material.Filled.Face" Color="Color.Success" Class="mx-4" Style="width:54px; height:54px;"></MudIcon>
-            <div>
-                <MudText Typo="Typo.subtitle1" Class="mud-text-secondary mb-n1">At Scene</MudText>
-                <MudText Typo="Typo.h5">21</MudText>
-            </div>
-        </MudPaper>
-    </MudItem>
-    <MudItem xs="12" sm="6" md="3">
-        <MudPaper Elevation="25" Class="d-flex flex-row pt-6 pb-4" Style="height:100px;">
-            <MudIcon Icon="@Icons.Material.Filled.Groups" Color="Color.Warning" Class="mx-4" Style="width:54px; height:54px;"></MudIcon>
-            <div>
-                <MudText Typo="Typo.subtitle1" Class="mud-text-secondary mb-n1">At Destination</MudText>
-                <MudText Typo="Typo.h5">50</MudText>
+            <div class="row" style="display:flex;">
+                <MudItem xs="12" sm="6" md="6">
+                    <MudChart ChartType="ChartType.Donut" Width="190px" Height="190px" @bind-SelectedIndex="Index" InputData="@data" ChartOptions="@options">
+                        <CustomGraphics>
+                            <text class="donut-inner-text" x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica" font-size="3" font-weight="normal">Shahama</text>
+                            <text class="donut-inner-text" x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica" font-size="5" font-weight="bold">@data.Sum().ToString()</text>
+                        </CustomGraphics>
+                    </MudChart>
+                </MudItem>
+                <MudItem xs="12" sm="6" md="6">
+                    <MudChart ChartType="ChartType.Donut" Width="190px" Height="190px" @bind-SelectedIndex="Index" InputData="@data" ChartOptions="@options">
+                        <CustomGraphics>
+                            <text class="donut-inner-text" x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica" font-size="3" font-weight="normal">Total</text>
+                            <text class="donut-inner-text" x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica" font-size="5" font-weight="bold">@data.Sum().ToString()</text>
+                        </CustomGraphics>
+                    </MudChart>
+                </MudItem>
             </div>
         </MudPaper>
     </MudItem>
 
     <MudItem xs="12" sm="6" md="3">
-        <MudPaper Elevation="25" Class="pa-4" Style="height:400px;">
-            <MudChart ChartType="ChartType.Donut" Width="300px" Height="300px" @bind-SelectedIndex="Index" InputData="@data"></MudChart>
+        <MudPaper Elevation="25" Class="pa-4" Style="height: calc(100vh - 195px)">
+        <MudDataGrid Items="@ElementsNew" Dense="true" Style="height:50%;overflow:auto;">
+            <Columns>
+                <Column T="ElementNew" Field="Number" Title="Nr" Hidden />
+                <Column T="ElementNew" CellStyleFunc="@_cellStyleFunc2" Sortable="false" Filterable="false" />
+                <Column T="ElementNew" Field="Priority" Title="Priority" Sortable="true" Filterable="false" />
+                <Column T="ElementNew" Field="Vehicles" Title="Vehicles" Sortable="true" Filterable="false" />
+            </Columns>
+        </MudDataGrid>
+            <MudDataGrid Items="@Elements" Dense="true" Style="height:48%;margin-top:15px;overflow:auto;">
+                <Columns>
+                    <Column T="Element" Field="Number" Title="Nr" Hidden />
+                    <Column T="Element" CellStyleFunc="@_cellStyleFunc1" Sortable="false" Filterable="false" />
+                    <Column T="Element" Field="Total" Title="Total" Sortable="true" Filterable="false" />
+                    <Column T="Element" Field="Percentage" Title="Percentage" Sortable="true" Filterable="false" />
+                </Columns>
+            </MudDataGrid>
         </MudPaper>
     </MudItem>
     <MudItem xs="12" sm="8" md="6">
-        <MudPaper Elevation="25" Class="d-flex flex-row pt-6 pb-4 pl-4" Style="height:400px;justify-content:space-evenly;">
+        <MudPaper Elevation="25" Class="d-flex flex-row pt-6 pb-4 pl-4" Style="height: calc(100vh - 195px)">
+
+        </MudPaper>
+    </MudItem>
+
+@*    <MudItem xs="12" sm="6" md="3">
+        <MudPaper Elevation="25" Class="pa-4" Style="height:200px;">
+            <MudChart ChartType="ChartType.Donut" Width="300px" Height="300px" @bind-SelectedIndex="Index" InputData="@data" ChartOptions="@options"></MudChart>
+        </MudPaper>
+    </MudItem>
+    <MudItem xs="12" sm="8" md="6">
+        <MudPaper Elevation="25" Class="d-flex flex-row pt-6 pb-4 pl-4" Style="height:200px;justify-content:space-evenly;">
 
 
         </MudPaper>
@@ -86,14 +154,14 @@
                 <Column T="Element" Field="Percentage" Title="Percentage" Sortable="true" Filterable="false" />
             </Columns>
         </MudDataGrid>
-    </MudItem>
+    </MudItem>*@
 
 </MudGrid>
 
 
 @code {
-    private IEnumerable<Element> Elements = new List<Element>();
-    private IEnumerable<ElementNew> ElementsNew = new List<ElementNew>();
+    private IList<Element> Elements = new List<Element>();
+    private IList<ElementNew> ElementsNew = new List<ElementNew>();
 
     private int Index = -1; 
     int dataSize = 4;
@@ -139,11 +207,16 @@
 
     public List<ChartSeries> Series = new List<ChartSeries>()
     {
-        new ChartSeries() { Name = "Response Time > 7", Data = new double[] { 40 } },
-        new ChartSeries() { Name = "Response Time < 20", Data = new double[] { 19 } },
+        new ChartSeries() { Name = "Response Time", Data = new double[] { 40, 20, 30 } },
+        new ChartSeries() { Name = "Time Spent At Scene", Data = new double[] { 19, 20, 25 } },
     };
-    public string[] XAxisLabels = { "1207", "1208" };
-    public string[] YAxisLabels = { "Response Time > 7", "Response Time < 20" };
+    public string[] XAxisLabels = { "1207", "1208", "1209" };
+    public string[] YAxisLabels = { "Response Time", "Time Spent At Scene" };
+
+    ChartOptions options = new ChartOptions
+    {
+        DisableLegend = true
+    };
 
     public class Element
     {
@@ -157,5 +230,25 @@
         public int Number { get; set; }
         public string Priority { get; set; }
         public string Vehicles { get; set; }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        for(int i =0; i < 15; i++)
+        {
+            Elements.Add(new Element()
+            {
+                Number = i,
+                Percentage = ((i + 10)/5).ToString(),
+                Total = (i + 5).ToString()
+            });
+
+            ElementsNew.Add(new ElementNew()
+            {
+                Number = i,
+                Priority = $"P{i}",
+                Vehicles = ( i+10 ).ToString()
+            });
+        }
     }
 }
