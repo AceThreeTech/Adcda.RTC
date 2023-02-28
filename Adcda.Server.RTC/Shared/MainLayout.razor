@@ -6,12 +6,12 @@
 
 <MudLayout>
     <MudAppBar Elevation="0" Style="background-color:#fff;border-bottom:1px solid #f0f0f0;position:fixed;">
-        <MudImage Src="/images/civil_defence_logo_black.jpg" Style="height:50px;"></MudImage>
+        <MudImage Src="/images/civil_defence_logo_black.jpg" Style="height:50px;margin-left:32px;"></MudImage>
         <MudSpacer />
         <MudIconButton Icon="@Icons.Material.Filled.Notifications" Color="Color.Surface" />
         <MudIconButton Icon="@Icons.Material.Filled.MoreVert" Color="Color.Surface" />
     </MudAppBar>
-        <MudDrawerContainer Class="mud-height-full" >
+    <MudDrawerContainer Class="mud-height-full" >
         <MudDrawer @bind-Open="@open" Fixed="false" Elevation="1" Variant="@DrawerVariant.Mini" OpenMiniOnHover="true" Style="height: calc(100vh - 64px);position: absolute;top: 64px;">
                 <NavMenu />
             </MudDrawer>

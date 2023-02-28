@@ -5,8 +5,40 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\ADCDA-ePCR\\Projects\\Adcda.RTC\\Adcda.Server.RTC\\wwwroot\\images\\amb.PNG",
+      "PackagePath": "staticwebassets\\images\\amb.PNG"
+    },
+    {
+      "Id": "C:\\ADCDA-ePCR\\Projects\\Adcda.RTC\\Adcda.Server.RTC\\wwwroot\\images\\ambnew.PNG",
+      "PackagePath": "staticwebassets\\images\\ambnew.PNG"
+    },
+    {
+      "Id": "C:\\ADCDA-ePCR\\Projects\\Adcda.RTC\\Adcda.Server.RTC\\wwwroot\\images\\ambulance responding.PNG",
+      "PackagePath": "staticwebassets\\images\\ambulance responding.PNG"
+    },
+    {
+      "Id": "C:\\ADCDA-ePCR\\Projects\\Adcda.RTC\\Adcda.Server.RTC\\wwwroot\\images\\ambulance.PNG",
+      "PackagePath": "staticwebassets\\images\\ambulance.PNG"
+    },
+    {
       "Id": "C:\\ADCDA-ePCR\\Projects\\Adcda.RTC\\Adcda.Server.RTC\\wwwroot\\images\\civil_defence_logo_black.jpg",
       "PackagePath": "staticwebassets\\images\\civil_defence_logo_black.jpg"
+    },
+    {
+      "Id": "C:\\ADCDA-ePCR\\Projects\\Adcda.RTC\\Adcda.Server.RTC\\wwwroot\\images\\civil_defence_logo_black_preview.png",
+      "PackagePath": "staticwebassets\\images\\civil_defence_logo_black_preview.png"
+    },
+    {
+      "Id": "C:\\ADCDA-ePCR\\Projects\\Adcda.RTC\\Adcda.Server.RTC\\wwwroot\\images\\destination.PNG",
+      "PackagePath": "staticwebassets\\images\\destination.PNG"
+    },
+    {
+      "Id": "C:\\ADCDA-ePCR\\Projects\\Adcda.RTC\\Adcda.Server.RTC\\wwwroot\\images\\hospital.png",
+      "PackagePath": "staticwebassets\\images\\hospital.png"
+    },
+    {
+      "Id": "C:\\ADCDA-ePCR\\Projects\\Adcda.RTC\\Adcda.Server.RTC\\wwwroot\\images\\patient.PNG",
+      "PackagePath": "staticwebassets\\images\\patient.PNG"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Adcda.Server.RTC.Microsoft.AspNetCore.StaticWebAssets.props",
