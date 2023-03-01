@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33402.96
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adcda.Server.RTC", "Adcda.Server.RTC\Adcda.Server.RTC.csproj", "{C15D600C-CC33-4EA6-99DD-DB07AA71770F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adcda.Server.RTC", "Adcda.Server.RTC\Adcda.Server.RTC.csproj", "{C15D600C-CC33-4EA6-99DD-DB07AA71770F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

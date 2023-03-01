@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bxU88+qJnOK9xV2lFA2FokqM2ZK6lXCHC4Tu9Hit3EY=",
+  "Hash": "TiUt7gl8R8TUV5L6sp4RHfj/VsyfmYg3xweqEDeX79Y=",
   "Source": "Adcda.Server.RTC",
   "BasePath": "_content/Adcda.Server.RTC",
   "Mode": "Default",
@@ -185,6 +185,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\patient.PNG"
+    },
+    {
+      "Identity": "C:\\ADCDA-ePCR\\Projects\\Adcda.RTC\\Adcda.Server.RTC\\wwwroot\\images\\scene.PNG",
+      "SourceId": "Adcda.Server.RTC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\ADCDA-ePCR\\Projects\\Adcda.RTC\\Adcda.Server.RTC\\wwwroot\\",
+      "BasePath": "_content/Adcda.Server.RTC",
+      "RelativePath": "images/scene.PNG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\scene.PNG"
     },
     {
       "Identity": "C:\\Users\\police\\.nuget\\packages\\mudblazor\\6.0.13\\staticwebassets\\MudBlazor.min.css",

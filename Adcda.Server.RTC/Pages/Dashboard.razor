@@ -31,7 +31,7 @@
     <MudItem xs="12" sm="6" md="3">
         <MudPaper Elevation="25" Class="d-flex flex-row" Style="height:70px;padding-top:7px;display:flex;justify-content:space-between;">
             @*<MudIcon Icon="@Icons.Material.Filled.Face" Color="Color.Success" Class="mx-4" Style="width:50px; height:50px;"></MudIcon>*@
-            <MudImage Class="mx-4" Src="/images/patient.png" Style="height:45px;width:45px;margin-top:5px;"></MudImage>
+            <MudImage Class="mx-4" Src="/images/scene.png" Style="height:48px;width:75px;margin-top:5px;"></MudImage>
             <div style="display:flex;flex-direction:column;justify-content:flex-start;align-items:flex-end;padding-right:10px;">
                 <MudText Typo="Typo.subtitle1" Class="mud-text-secondary mb-n1" Style="font-weight:500;">At Scene</MudText>
                 <MudText Typo="Typo.h5" Style="font-weight:bold;">21</MudText>
@@ -41,7 +41,7 @@
     <MudItem xs="12" sm="6" md="3">
         <MudPaper Elevation="25" Class="d-flex flex-row" Style="height:70px;padding-top:7px;display:flex;justify-content:space-between;">
             @*<MudIcon Icon="@Icons.Material.Filled.Groups" Color="Color.Warning" Class="mx-4" Style="width:50px; height:50px;"></MudIcon>*@
-            <MudImage Class="mx-4" Src="/images/hospital.png" Style="height:50px;width:50px;margin-top:5px;"></MudImage>
+            <MudImage Class="mx-4" Src="/images/destination.png" Style="height:50px;width:75px;margin-top:5px;"></MudImage>
             <div style="display:flex;flex-direction:column;justify-content:flex-start;align-items:flex-end;padding-right:10px;">
                 <MudText Typo="Typo.subtitle1" Class="mud-text-secondary mb-n1" Style="font-weight:500;">At Destination</MudText>
                 <MudText Typo="Typo.h5" Style="font-weight:bold;">50</MudText>
@@ -54,7 +54,7 @@
         <MudPaper Elevation="25" Class="pa-2" Style="height: calc(100vh - 195px)">
             <div class="row" style="display:flex;">
                 <MudItem xs="12" sm="6" md="6">
-                    <MudChart ChartType="ChartType.Donut" Width="180px" Height="180px" @bind-SelectedIndex="Index" InputData="@data" ChartOptions="@options">
+                    <MudChart ChartType="ChartType.Donut" Width="190px" Height="180px" @bind-SelectedIndex="Index" InputData="@data" ChartOptions="@options">
                         <CustomGraphics>
                             <text class="donut-inner-text" x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica" font-size="3" font-weight="normal">Abu Dhabi</text>
                             <text class="donut-inner-text" x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica" font-size="5" font-weight="bold">@data.Sum().ToString()</text>
@@ -62,27 +62,27 @@
                     </MudChart>
                 </MudItem>
                 <MudItem xs="12" sm="6" md="6">
-                    <MudChart ChartType="ChartType.Donut" Width="180px" Height="180px" @bind-SelectedIndex="Index" InputData="@data" ChartOptions="@options">
+                    <MudChart ChartType="ChartType.Donut" Width="190px" Height="180px" @bind-SelectedIndex="Index" InputData="@data" ChartOptions="@options">
+                        <CustomGraphics>
+                            <text class="donut-inner-text" x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica" font-size="3" font-weight="normal">Shahama</text>
+                            <text class="donut-inner-text" x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica" font-size="5" font-weight="bold">@data.Sum().ToString()</text>
+                        </CustomGraphics>
+                    </MudChart>
+                </MudItem>
+            </div>
+            <div class="row" style="display:flex;">
+                <MudItem xs="12" sm="6" md="6">
+                    <MudChart ChartType="ChartType.Donut" Width="190px" Height="180px" @bind-SelectedIndex="Index" InputData="@data" ChartOptions="@options">
                         <CustomGraphics>
                             <text class="donut-inner-text" x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica" font-size="3" font-weight="normal">Al Ain</text>
                             <text class="donut-inner-text" x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica" font-size="5" font-weight="bold">@data.Sum().ToString()</text>
                         </CustomGraphics>
                     </MudChart>
                 </MudItem>
-            </div>
-            <div class="row" style="display:flex;">
                 <MudItem xs="12" sm="6" md="6">
-                    <MudChart ChartType="ChartType.Donut" Width="180px" Height="180px" @bind-SelectedIndex="Index" InputData="@data" ChartOptions="@options">
+                    <MudChart ChartType="ChartType.Donut" Width="190px" Height="180px" @bind-SelectedIndex="Index" InputData="@data" ChartOptions="@options">
                         <CustomGraphics>
-                            <text class="donut-inner-text" x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica" font-size="3" font-weight="normal">Shahama</text>
-                            <text class="donut-inner-text" x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica" font-size="5" font-weight="bold">@data.Sum().ToString()</text>
-                        </CustomGraphics>
-                    </MudChart>
-                </MudItem>
-                <MudItem xs="12" sm="6" md="6">
-                    <MudChart ChartType="ChartType.Donut" Width="180px" Height="180px" @bind-SelectedIndex="Index" InputData="@data" ChartOptions="@options">
-                        <CustomGraphics>
-                            <text class="donut-inner-text" x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica" font-size="3" font-weight="normal">Abu Dhabi</text>
+                            <text class="donut-inner-text" x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica" font-size="3" font-weight="normal">Dafrah</text>
                             <text class="donut-inner-text" x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica" font-size="5" font-weight="bold">@data.Sum().ToString()</text>
                         </CustomGraphics>
                     </MudChart>
@@ -90,15 +90,15 @@
             </div>
             <div class="row" style="display:flex;">
                 <MudItem xs="12" sm="6" md="6">
-                    <MudChart ChartType="ChartType.Donut" Width="180px" Height="180px" @bind-SelectedIndex="Index" InputData="@data" ChartOptions="@options">
+                    <MudChart ChartType="ChartType.Donut" Width="190px" Height="180px" @bind-SelectedIndex="Index" InputData="@data" ChartOptions="@options">
                         <CustomGraphics>
-                            <text class="donut-inner-text" x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica" font-size="3" font-weight="normal">Shahama</text>
+                            <text class="donut-inner-text" x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica" font-size="3" font-weight="normal">Western Region</text>
                             <text class="donut-inner-text" x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica" font-size="5" font-weight="bold">@data.Sum().ToString()</text>
                         </CustomGraphics>
                     </MudChart>
                 </MudItem>
                 <MudItem xs="12" sm="6" md="6">
-                    <MudChart ChartType="ChartType.Donut" Width="180px" Height="180px" @bind-SelectedIndex="Index" InputData="@data" ChartOptions="@options">
+                    <MudChart ChartType="ChartType.Donut" Width="190px" Height="180px" @bind-SelectedIndex="Index" InputData="@data" ChartOptions="@options">
                         <CustomGraphics>
                             <text class="donut-inner-text" x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica" font-size="3" font-weight="normal">Total</text>
                             <text class="donut-inner-text" x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica" font-size="5" font-weight="bold">@data.Sum().ToString()</text>
@@ -108,14 +108,14 @@
             </div>
             <div class="row" style="display:flex;flex-direction:column;">
                 <MudItem xs="12" sm="12" md="12">
-                    <MudPaper Elevation="25" Class="d-flex flex-column" Style="height:80px;padding-top:7px;position:relative;top:20px;margin-right:10px;margin-left:10px;justify-content:center;align-items:center;background-color:#3292ff;">
-                            <MudText Typo="Typo.subtitle1" Class="mud-text-secondary mb-n1" Style="font-weight:500;color:#fff;">Average Response Time (Minutes)</MudText>
+                    <MudPaper Elevation="25" Class="d-flex flex-column" Style="height:80px;padding-top:0;position:relative;top:20px;margin-right:10px;margin-left:10px;justify-content:center;align-items:center;background-color:rgb(41, 121, 255);">
+                            <MudText Typo="Typo.subtitle1" Class="mud-text-secondary mb-n1" Style="font-weight:500;color:#fff;font-size: larger;">Average Response Time (Minutes)</MudText>
                         <MudText Typo="Typo.h5" Style="font-weight:bold;color:#fff;">10.2</MudText>
                     </MudPaper>
                 </MudItem>
                                 <MudItem xs="12" sm="12" md="12">
-                    <MudPaper Elevation="25" Class="d-flex flex-column" Style="height:80px;padding-top:7px;position:relative;top:40px;margin-right:10px;margin-left:10px;justify-content:center;align-items:center;background-color:#eace5d;">
-                            <MudText Typo="Typo.subtitle1" Class="mud-text-secondary mb-n1" Style="font-weight:500;color:#fff;">Average Time Spent on Scene (Minutes)</MudText>
+                    <MudPaper Elevation="25" Class="d-flex flex-column" Style="height:80px;padding-top:0;position:relative;top:40px;margin-right:10px;margin-left:10px;justify-content:center;align-items:center;background-color:rgb(255, 196, 0);">
+                        <MudText Typo="Typo.subtitle1" Class="mud-text-secondary mb-n1" Style="font-weight:500;color:#fff;font-size: larger;">Average Time Spent on Scene (Minutes)</MudText>
                         <MudText Typo="Typo.h5" Style="font-weight:bold;color:#fff;">14.8</MudText>
                     </MudPaper>
                 </MudItem>
@@ -125,7 +125,7 @@
 
     <MudItem xs="12" sm="6" md="3">
         <MudPaper Elevation="25" Class="pa-4" Style="height: calc(100vh - 195px)">
-        <MudDataGrid Items="@ElementsNew" Dense="true" Style="height:50%;overflow:auto;">
+        <MudDataGrid Items="@ElementsNew" Dense="true" Style="height:23%;overflow:auto;">
             <Columns>
                 <Column T="ElementNew" Field="Number" Title="Nr" Hidden />
                 <Column T="ElementNew" CellStyleFunc="@_cellStyleFunc2" Sortable="false" Filterable="false" />
@@ -235,17 +235,17 @@
     {
         string style = "";
 
-        if (x.Number == 1)
-            style += "background-color:#8CED8C";
+        if (x.Number == 0)
+            style += "background-color:#000000";
+
+        else if (x.Number == 1)
+            style += "background-color:#e90f3b";
 
         else if (x.Number == 2)
-            style += "background-color:#E5BDE5";
+            style += "background-color:#F1F165";
 
         else if (x.Number == 3)
-            style += "background-color:#EACE5D";
-
-        else if (x.Number == 4)
-            style += "background-color:#F1F165";
+            style += "background-color:#8CED8C";
 
         return style;
     };
@@ -279,6 +279,15 @@
 
     protected override async Task OnInitializedAsync()
     {
+        for (int j = 0; j < 4; j++)
+        {
+            ElementsNew.Add(new ElementNew()
+            {
+                Number = j,
+                Priority = $"P{j}",
+                Vehicles = ( j+(10*j) ).ToString()
+            });
+        }
         for(int i =0; i < 15; i++)
         {
             Elements.Add(new Element()
@@ -286,13 +295,6 @@
                 Number = i,
                 Percentage = ((i + 10)/5).ToString(),
                 Total = (i + 5).ToString()
-            });
-
-            ElementsNew.Add(new ElementNew()
-            {
-                Number = i,
-                Priority = $"P{i}",
-                Vehicles = ( i+10 ).ToString()
             });
         }
     }

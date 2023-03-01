@@ -20,6 +20,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/ADCDA-ePCR/Projects/Adcda.RTC/Adcda.Server.RTC/Pages/ActiveTablets.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWN0aXZlVGFibGV0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/ADCDA-ePCR/Projects/Adcda.RTC/Adcda.Server.RTC/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -34,6 +38,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/ADCDA-ePCR/Projects/Adcda.RTC/Adcda.Server.RTC/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/ADCDA-ePCR/Projects/Adcda.RTC/Adcda.Server.RTC/Pages/Triage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJpYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/ADCDA-ePCR/Projects/Adcda.RTC/Adcda.Server.RTC/Pages/Vehicles.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVoaWNsZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/ADCDA-ePCR/Projects/Adcda.RTC/Adcda.Server.RTC/Shared/MainLayout.razor]
