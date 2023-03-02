@@ -6,13 +6,19 @@
         height: 10%; width: 99%;justify-content: center;align-items: center;background-color: #9d919d;border-radius: 0;
         clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 15%, 95% 0);
     }
-
+    .flex-row:hover{
+        box-shadow: 0 0 11px rgba(33,33,33,.2)!important;
+        cursor:pointer!important;
+    }
+    .VehicleActive{
+        border:1px solid #9b8080;
+    }
 </style>
 
 <MudGrid Style="width: calc(100% + 56px);">
     <div class="row" style="display: flex; flex-direction: row; width: 100%;">
-        <MudItem xs="12" sm="3" md="2" Style="overflow-y: auto; height: calc(100vh - 72px);padding-right:12px;">
-            <MudPaper Elevation="40" Class="d-flex flex-row" Style="height: 85px; padding-top: 0; display: flex; justify-content: flex-start; border-radius: 0;">
+        <MudItem id="" xs="12" sm="3" md="2" Style="overflow-y: auto; height: calc(100vh - 72px);padding-right:12px;">
+            <MudPaper Elevation="40"  Class="@vehicleCardClass[0]" Style="height: 85px; padding-top: 0; display: flex; justify-content: flex-start; border-radius: 0;" @onclick="_ => ToggleClass(0)">
                 <span style="height: 100%; width: 20%;background-color: #e92424
                          "><MudIcon Icon="@Icons.Material.Filled.LocalShipping" Class="mudIcon mx-4" Style="width: 25px; height: 85px;fill:aliceblue;"></MudIcon></span>
                 
@@ -25,7 +31,7 @@
                     </div>
                 </div>
             </MudPaper>
-            <MudPaper Elevation="25" Class="d-flex flex-row" Style="height: 85px; padding-top: 0; display: flex; justify-content: flex-start; margin-top: 10px; border-radius: 0;">
+            <MudPaper Elevation="25" Class="@vehicleCardClass[1]" Style="height: 85px; padding-top: 0; display: flex; justify-content: flex-start; margin-top: 10px; border-radius: 0;" @onclick="_ => ToggleClass(1)">
                 <span style="height: 100%; width: 20%;background-color: #e92424
                          "><MudIcon Icon="@Icons.Material.Filled.LocalShipping" Class="mudIcon mx-4" Style="width: 25px; height: 85px;fill:aliceblue;"></MudIcon></span>
                 
@@ -38,7 +44,7 @@
                     </div>
                 </div>
             </MudPaper>
-            <MudPaper Elevation="25" Class="d-flex flex-row" Style="height: 85px; padding-top: 0; display: flex; justify-content: flex-start; margin-top: 10px; border-radius: 0;">
+            <MudPaper Elevation="25" Class="@vehicleCardClass[2]" Style="height: 85px; padding-top: 0; display: flex; justify-content: flex-start; margin-top: 10px; border-radius: 0;" @onclick="_ => ToggleClass(2)">
                 <span style="height: 100%; width: 20%;background-color: #3fb127
                          "><MudIcon Icon="@Icons.Material.Filled.LocalShipping" Class="mudIcon mx-4" Style="width: 25px; height: 85px;fill:aliceblue;"></MudIcon></span>
                 
@@ -51,7 +57,7 @@
                     </div>
                 </div>
             </MudPaper>
-            <MudPaper Elevation="25" Class="d-flex flex-row" Style="height: 85px; padding-top: 0; display: flex; justify-content: flex-start; margin-top: 10px; border-radius: 0;">
+            <MudPaper Elevation="25" Class="@vehicleCardClass[3]" Style="height: 85px; padding-top: 0; display: flex; justify-content: flex-start; margin-top: 10px; border-radius: 0;" @onclick="_ => ToggleClass(3)">
                 <span style="height: 100%; width: 20%; background-color: rgb(21, 203, 157);
                          "><MudIcon Icon="@Icons.Material.Filled.LocalShipping" Class="mudIcon mx-4" Style="width: 25px; height: 85px;fill:aliceblue;"></MudIcon></span>
                 
@@ -64,7 +70,7 @@
                     </div>
                 </div>
             </MudPaper>
-            <MudPaper Elevation="25" Class="d-flex flex-row" Style="height: 85px; padding-top: 0; display: flex; justify-content: flex-start; margin-top: 10px; border-radius: 0;">
+            <MudPaper Elevation="25" Class="@vehicleCardClass[4]" Style="height: 85px; padding-top: 0; display: flex; justify-content: flex-start; margin-top: 10px; border-radius: 0;" @onclick="_ => ToggleClass(4)">
                 <span style="height: 100%; width: 20%;background-color: rgb(41, 121, 255);
                          "><MudIcon Icon="@Icons.Material.Filled.LocalShipping" Class="mudIcon mx-4" Style="width: 25px; height: 85px;fill:aliceblue;"></MudIcon></span>
                 
@@ -77,7 +83,7 @@
                     </div>
                 </div>
             </MudPaper>
-            <MudPaper Elevation="25" Class="d-flex flex-row" Style="height: 85px; padding-top: 0; display: flex; justify-content: flex-start; margin-top: 10px; border-radius: 0;border:1px solid #9b8080;">
+            <MudPaper Elevation="25" Class="@vehicleCardClass[5]" Style="height: 85px; padding-top: 0; display: flex; justify-content: flex-start; margin-top: 10px; border-radius: 0;" @onclick="_ => ToggleClass(5)">
                 <span style="height: 100%; width: 20%;background-color: rgb(255, 145, 0);
                          "><MudIcon Icon="@Icons.Material.Filled.LocalShipping" Class="mudIcon mx-4" Style="width: 25px; height: 85px;fill:aliceblue;"></MudIcon></span>
                 
@@ -90,7 +96,7 @@
                     </div>
                 </div>
             </MudPaper>
-            <MudPaper Elevation="25" Class="d-flex flex-row" Style="height: 85px; padding-top: 0; display: flex; justify-content: flex-start; margin-top: 10px; border-radius: 0;">
+            <MudPaper Elevation="25" Class="@vehicleCardClass[6]" Style="height: 85px; padding-top: 0; display: flex; justify-content: flex-start; margin-top: 10px; border-radius: 0;" @onclick="_ => ToggleClass(6)">
                 <span style="height: 100%; width: 20%;background-color: #7c6e7c
                          "><MudIcon Icon="@Icons.Material.Filled.LocalShipping" Class="mudIcon mx-4" Style="width: 25px; height: 85px;fill:aliceblue;"></MudIcon></span>
                 
@@ -103,7 +109,7 @@
                     </div>
                 </div>
             </MudPaper>
-            <MudPaper Elevation="25" Class="d-flex flex-row" Style="height: 85px; padding-top: 0; display: flex; justify-content: flex-start; margin-top: 10px; border-radius: 0;">
+            <MudPaper Elevation="25" Class="@vehicleCardClass[7]" Style="height: 85px; padding-top: 0; display: flex; justify-content: flex-start; margin-top: 10px; border-radius: 0;" @onclick="_ => ToggleClass(7)">
                 <span style="height: 100%; width: 20%;background-color: #7c6e7c
                          "><MudIcon Icon="@Icons.Material.Filled.LocalShipping" Class="mudIcon mx-4" Style="width: 25px; height: 85px;fill:aliceblue;"></MudIcon></span>
                 
@@ -116,7 +122,7 @@
                     </div>
                 </div>
             </MudPaper>
-            <MudPaper Elevation="25" Class="d-flex flex-row" Style="height: 85px; padding-top: 0; display: flex; justify-content: flex-start; margin-top: 10px; border-radius: 0;">
+            <MudPaper Elevation="25" Class="@vehicleCardClass[8]" Style="height: 85px; padding-top: 0; display: flex; justify-content: flex-start; margin-top: 10px; border-radius: 0;" @onclick="_ => ToggleClass(8)">
                 <span style="height: 100%; width: 20%;background-color: #7c6e7c
                          "><MudIcon Icon="@Icons.Material.Filled.LocalShipping" Class="mudIcon mx-4" Style="width: 25px; height: 85px;fill:aliceblue;"></MudIcon></span>
                 
@@ -129,7 +135,7 @@
                     </div>
                 </div>
             </MudPaper>
-            <MudPaper Elevation="25" Class="d-flex flex-row" Style="height: 85px; padding-top: 0; display: flex; justify-content: flex-start; margin-top: 10px; border-radius: 0;">
+            <MudPaper Elevation="25" Class="@vehicleCardClass[9]" Style="height: 85px; padding-top: 0; display: flex; justify-content: flex-start; margin-top: 10px; border-radius: 0;" @onclick="_ => ToggleClass(9)">
                 <span style="height: 100%; width: 20%;background-color: #7c6e7c
                          "><MudIcon Icon="@Icons.Material.Filled.LocalShipping" Class="mudIcon mx-4" Style="width: 25px; height: 85px;fill:aliceblue;"></MudIcon></span>
                 
@@ -142,7 +148,7 @@
                     </div>
                 </div>
             </MudPaper>
-            <MudPaper Elevation="25" Class="d-flex flex-row" Style="height: 85px; padding-top: 0; display: flex; justify-content: flex-start; margin-top: 10px; border-radius: 0;">
+            <MudPaper Elevation="25" Class="@vehicleCardClass[10]" Style="height: 85px; padding-top: 0; display: flex; justify-content: flex-start; margin-top: 10px; border-radius: 0;" @onclick="_ => ToggleClass(10)">
                 <span style="height: 100%; width: 20%;background-color: #7c6e7c
                          "><MudIcon Icon="@Icons.Material.Filled.LocalShipping" Class="mudIcon mx-4" Style="width: 25px; height: 85px;fill:aliceblue;"></MudIcon></span>
                 
@@ -155,7 +161,7 @@
                     </div>
                 </div>
             </MudPaper>
-            <MudPaper Elevation="25" Class="d-flex flex-row" Style="height: 85px; padding-top: 0; display: flex; justify-content: flex-start; margin-top: 10px; border-radius: 0;">
+            <MudPaper Elevation="25" Class="@vehicleCardClass[11]" Style="height: 85px; padding-top: 0; display: flex; justify-content: flex-start; margin-top: 10px; border-radius: 0;" @onclick="_ => ToggleClass(11)">
                 <span style="height: 100%; width: 20%;background-color: #7c6e7c
                          "><MudIcon Icon="@Icons.Material.Filled.LocalShipping" Class="mudIcon mx-4" Style="width: 25px; height: 85px;fill:aliceblue;"></MudIcon></span>
                 
@@ -168,7 +174,7 @@
                     </div>
                 </div>
             </MudPaper>
-            <MudPaper Elevation="25" Class="d-flex flex-row" Style="height: 85px; padding-top: 0; display: flex; justify-content: flex-start; margin-top: 10px; border-radius: 0;">
+            <MudPaper Elevation="25" Class="@vehicleCardClass[12]" Style="height: 85px; padding-top: 0; display: flex; justify-content: flex-start; margin-top: 10px; border-radius: 0;" @onclick="_ => ToggleClass(12)">
                 <span style="height: 100%; width: 20%;background-color: #7c6e7c
                          "><MudIcon Icon="@Icons.Material.Filled.LocalShipping" Class="mudIcon mx-4" Style="width: 25px; height: 85px;fill:aliceblue;"></MudIcon></span>
                 
@@ -181,7 +187,6 @@
                     </div>
                 </div>
             </MudPaper>
-
         </MudItem>
         <MudItem xs="12" sm="6" md="8" Style="height: calc(100vh - 72px);">
             <div id="map" style="height:98%;width:99%; position: relative;">
@@ -224,7 +229,7 @@
                     <MudListItem>    <div style="display: flex; flex-direction: row; ">
                         <MudIcon Icon="@Icons.Material.Filled.Boy" Class="mudIcon mx-4" Color="Color.Info" Style="width: 45px; height: 45px;"></MudIcon>
                         <div style="display: flex; flex-direction: column;">
-                            <MudText Typo="Typo.subtitle1" Style="Color: #263238; font-weight: bold">Muhammad Shahid</MudText>
+                            <MudText Typo="Typo.subtitle1" Style="Color: #263238; font-weight: bold">Usama Shahid</MudText>
                             <div style="display: flex; flex-direction: row; justify-content: flex-start; align-items: center;">
                                 <MudText Typo="Typo.subtitle1" Style="Color: #455A64; font-weight: normal">GUEST</MudText>
                                 @*<MudText Style="margin-left: 5px;" Class="mud-text-secondary">Guest</MudText>*@
@@ -276,6 +281,20 @@
 
 </MudGrid>
 @code {
+    string[] vehicleCardClass = new string[13];
+
+    protected override async Task OnInitializedAsync()
+    {
+        ClearActiveClassAll();
+        vehicleCardClass[0] = "d-flex flex-row VehicleActive";
+    }
+
+    protected void ToggleClass(int i)
+    {
+        ClearActiveClassAll();
+        ClearActiveClassIndex(i);
+    }
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
@@ -284,5 +303,23 @@
             StateHasChanged();
         }
 
+    }
+
+    private void ClearActiveClassAll()
+    {
+        for (int i = 0; i < vehicleCardClass.Length; i++)
+            vehicleCardClass[i] = "d-flex flex-row";
+    }
+
+    private void ClearActiveClassIndex(int index)
+    {
+        if (vehicleCardClass[index].Contains("VehicleActive"))
+        {
+            vehicleCardClass[index] = "d-flex flex-row";
+        }
+        else
+        {
+            vehicleCardClass[index] = "d-flex flex-row VehicleActive";
+        }
     }
 }

@@ -5,7 +5,9 @@
     #barchart {
         height:300px!important;
     }
+
 </style>
+
 <MudGrid Style="width:calc(100% + 56px);">
 
     <MudItem xs="12" sm="6" md="3" >
@@ -133,10 +135,11 @@
                 <Column T="ElementNew" Field="Vehicles" Title="Vehicles" Sortable="true" Filterable="false" />
             </Columns>
         </MudDataGrid>
-            <MudDataGrid Items="@Elements" Dense="true" Style="height:48%;margin-top:15px;overflow:auto;">
+            <MudDataGrid Items="@Elements" Dense="true" Style="height:42%;margin-top:15px;overflow:auto;">
                 <Columns>
                     <Column T="Element" Field="Number" Title="Nr" Hidden />
                     <Column T="Element" CellStyleFunc="@_cellStyleFunc1" Sortable="false" Filterable="false" />
+                    <Column T="Element" Field="Status" Sortable="false" Filterable="false" />
                     <Column T="Element" Field="Total" Title="Total" Sortable="true" Filterable="false" />
                     <Column T="Element" Field="Percentage" Title="Percentage" Sortable="true" Filterable="false" />
                 </Columns>
@@ -207,6 +210,7 @@
 @code {
     private IList<Element> Elements = new List<Element>();
     private IList<ElementNew> ElementsNew = new List<ElementNew>();
+    string[] status = new string[8] { "AT DEST", "AT SCENE", "AT STN", "AVAIL", "OFF DUTY", "RESPOND", "TRANSPORT", "TO STN" };
 
     private int Index = -1; 
     int dataSize = 4;
@@ -216,17 +220,29 @@
     {
         string style = "";
 
-        if (x.Number == 1)
-            style += "background-color:#8CED8C";
+        if (x.Number == 0)
+            style += "background-color:rgb(41,121,255)";
+
+        else if (x.Number == 1)
+            style += "background-color:rgb(21,203,157)";
 
         else if (x.Number == 2)
             style += "background-color:#E5BDE5";
 
         else if (x.Number == 3)
-            style += "background-color:#EACE5D";
+            style += "background-color:#3fb127";
 
         else if (x.Number == 4)
-            style += "background-color:#F1F165";
+            style += "background-color:#7c6e7c";
+
+        else if (x.Number == 5)
+            style += "background-color:#e92424";
+
+        else if (x.Number == 6)
+            style += "background-color:rgb(255,145,0)";
+
+        else if (x.Number == 7)
+            style += "background-color:#f1f165";
 
         return style;
     };
@@ -266,6 +282,7 @@
     public class Element
     {
         public int Number { get; set; }
+        public string Status { get; set; }
         public string Total { get; set; }
         public string Percentage { get; set; }
     }
@@ -288,11 +305,12 @@
                 Vehicles = ( j+(10*j) ).ToString()
             });
         }
-        for(int i =0; i < 15; i++)
+        for(int i =0; i < 8; i++)
         {
             Elements.Add(new Element()
             {
                 Number = i,
+                Status = status[i],
                 Percentage = ((i + 10)/5).ToString(),
                 Total = (i + 5).ToString()
             });
